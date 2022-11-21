@@ -1,0 +1,42 @@
+{% extends './layout/layout.html' %} 
+{% block content %}
+
+<ul class="py-3 my-3">
+  <div class="mb-2">
+    <a class="link-dark text-decoration-none" href="/pattern">
+      <i class="fa-solid fa-angles-right fa-xs"></i> 도안 추천
+    </a>
+  </div>
+  <div id="pattern_section" class="pattern_section_class"></div>
+  <hr />
+</ul>
+
+
+<ul class="py-3 my-3">
+  <div class="mb-2">
+    <a class="link-dark text-decoration-none" href="/yarn">
+      <i class="fa-solid fa-angles-right fa-xs"></i> 실 추천</a>
+  </div>
+  <div id="yarn_section" class="yarn_section_class"></div>
+  <hr />
+</ul>
+
+<ul class="py-3 my-3">
+  <div class="mb-2">
+    <a class="link-dark text-decoration-none" href="/yarn">
+      <i class="fa-solid fa-angles-right fa-xs"></i> 실시간 인기 글</a>
+
+  </div>
+  <div></div>
+  <hr />
+</ul>
+
+
+{% endblock %} 
+{% block script %}
+<script src="/ravelryApi.js"></script>
+<script>
+  getPatternApi(20);
+  getYarnApi(20);
+</script>
+{% endblock %}
